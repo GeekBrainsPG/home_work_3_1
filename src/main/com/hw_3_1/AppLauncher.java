@@ -19,6 +19,9 @@ public class AppLauncher {
 
         AppLauncher.swapTwoElementsInArray(items, item1, item3);
 
+        ArrayList<Item> arrayListItems = AppLauncher.convertArrayToArrayList(new Item[]{item1, item2, item3});
+
+        System.out.println(Arrays.toString(new ArrayList[]{arrayListItems}));
     }
 
     public static <A> void swapTwoElementsInArray(List<A> array, A item1, A item2) {
@@ -31,6 +34,12 @@ public class AppLauncher {
 
             System.out.println(Arrays.toString(new List[]{array}));
         }
+    }
+
+    public static <A> ArrayList<A> convertArrayToArrayList(A[] array) {
+        final ArrayList<A> arrayList = new ArrayList<>(Arrays.asList(array));
+
+        return arrayList;
     }
 
 }
